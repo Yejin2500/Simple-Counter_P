@@ -5,6 +5,11 @@ import {useState} from "react";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [input, setInput] = useState("");
+
+  useEffect(() => {
+    console.log('count: ${count} / input: ${input}');
+  }, [count, input]);
 
   const onClickButton = (value) => {
     setCount(count + value);
